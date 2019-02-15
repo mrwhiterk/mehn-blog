@@ -11,7 +11,7 @@ const port = 4000
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-  res.send("hello world")
+  res.send("app is working")
 })
 
 app.listen(port, (err) => {
