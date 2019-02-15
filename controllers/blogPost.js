@@ -3,7 +3,10 @@ const {
 } = require("../models/blogPost")
 
 module.exports = {
+  index: (req, res) => {
+    res.send('list of blogPosts')
+  },
   show: (req, res) => {
-    console.log('tweet show')
+    res.send('blogPosts show page')
   }
 }

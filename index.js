@@ -10,9 +10,7 @@ const port = 4000
 
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-  res.send("app is working")
-})
+app.use(require("./routes/blogPost.js"))
 
 app.listen(port, (err) => {
   console.log(`Server is up and running on ${port}`)
