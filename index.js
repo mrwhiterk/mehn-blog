@@ -1,5 +1,10 @@
+// get data from database
+// link up routes in controller
+// render data with hbs
+
 const express = require('express')
 const app = express()
+
 
 const port = 4000
 
