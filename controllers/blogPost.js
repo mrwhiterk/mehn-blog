@@ -7,16 +7,12 @@ module.exports = {
     BlogPost.find({}).exec(function (err, post) {
 
       if (err) {
-        console.log('err')
-        res.send(err)
-
+        console.log(err);
       } else {
-        console.log('post')
         res.send(post)
       }
     })
-    // BlogPost.find({})
-    //   .then(blogs => res.send(blogs))
+
   },
   show: (req, res) => {
     res.send('blogPosts show page')
