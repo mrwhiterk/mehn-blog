@@ -1,16 +1,14 @@
-// get data from database
-// link up routes in controller
-// render data with hbs
-
 const express = require('express')
 const app = express()
-
+const hbs = require("hbs")
+const methodOverride = require("method-override")
 
 const port = 4000
 
 app.set("view engine", "hbs")
 
 app.use(express.static('public'))
+app.use(methodOverride("_method"))
 
 app.use(require("./routes/blogPost.js"))
 
