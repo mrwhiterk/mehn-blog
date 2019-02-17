@@ -8,10 +8,16 @@ const app = express()
 
 const port = 4000
 
+app.set("view engine", "hbs")
+
 app.use(express.static('public'))
 
 app.use(require("./routes/blogPost.js"))
 
 app.listen(port, (err) => {
-  console.log(`Server is up and running on ${port}`)
+  if (err) {
+    console.log(err)
+  } else {
+    console.log(`Server is up and running on ${port}`)
+  }
 })

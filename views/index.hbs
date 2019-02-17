@@ -1,0 +1,17 @@
+{{#if blogPosts}}
+<ul class="blogPosts">
+  {{#each blogPosts}}
+  <div class="blogPost">
+    <div class="blogPost-title">
+      <h1>{{ title }}</h1>
+    </div>
+    <div class="blogPost-content">
+      <p>{{ content }}</p>
+    </div>
+    <div class="blogPost-action">
+      <span class="blogPost__date">{{ createdAt }}</span>
+    </div>
+  </div>
+  {{/each}}
+</ul>
+{{/if}}

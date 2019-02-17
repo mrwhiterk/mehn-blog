@@ -3,16 +3,17 @@ const {
 } = require("../models/BlogPost")
 
 module.exports = {
+
   index: (req, res) => {
-    BlogPost.find({}).exec(function (err, post) {
-
-      if (err) {
-        console.log(err);
-      } else {
-        res.send(post)
-      }
-    })
-
+    BlogPost.find({})
+      .sort({
+        createdAt: -1
+      })
+      .then(blogPosts => {
+        res.render("index", {
+          blogPosts
+        })
+      })
   },
   show: (req, res) => {
     res.send('blogPosts show page')
