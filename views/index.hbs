@@ -1,19 +1,24 @@
 {{#if blogPosts}}
 <ul class="blogPosts">
   {{#each blogPosts}}
-  <div class="blogPost">
+  <div class="blogPost flex-index">
     <div class="blogPost-title">
-      <h1>{{ title }}</h1>
+      <a href="/{{_id}}">
+        <h1>{{ title }}</h1>
+      </a>
+
     </div>
-    <div class="blogPost-content">
+    {{!-- <div class="blogPost-content">
       <p>{{ content }}</p>
     </div>
     <div class="blogPost-action">
       <span class="blogPost__date">{{ createdAt }}</span>
     </div>
-    <form action="/{{_id}}?_method=DELETE" method="POST">
-      <button class="btn btn-danger">delete</button>
-    </form>
+    <div class="btn-container">
+      <form action="/{{_id}}?_method=DELETE" method="POST">
+        <button class="btn btn-danger">delete</button>
+      </form> --}}
+  </div>
 
   </div>
   {{/each}}

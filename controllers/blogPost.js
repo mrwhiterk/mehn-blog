@@ -16,7 +16,14 @@ module.exports = {
       })
   },
   show: (req, res) => {
-    res.send('blogPosts show page')
+    BlogPost.findOne({
+        _id: req.params.id
+      })
+      .exec(function (err, blogPost) {
+        res.render("show", {
+          blogPost
+        })
+      })
   },
   delete: (req, res) => {
     BlogPost.findByIdAndRemove(req.params.id, (err, tasks) => {
