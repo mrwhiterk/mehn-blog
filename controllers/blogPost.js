@@ -25,6 +25,17 @@ module.exports = {
         })
       })
   },
+  create: (req, res) => {
+    BlogPost.create({
+      title: req.body.blogPost.title,
+      content: req.body.blogPost.content
+    }).then(_ => {
+      res.redirect("/")
+    })
+  },
+  new: (req, res) => {
+    res.render("new")
+  },
   delete: (req, res) => {
     BlogPost.findByIdAndRemove(req.params.id, (err, tasks) => {
       if (err) return res.status(500).send(err);
