@@ -13,9 +13,24 @@
     <form action="/{{blogPost._id}}?_method=DELETE" method="POST">
       <button class="btn btn-danger">delete</button>
     </form>
-    {{!-- <a href="/{{blogPost._id}}"><button class="btn btn-info">read</button></a> --}}
+
   </div>
-
-
 </div>
 {{/if}}
+<div class="edit-container">
+
+  <h4>Edit post:</h4>
+  <form method="POST" action="/{{blogPost._id}}?_method=PUT" class="row">
+    <p class="input-field inline col s10">
+      <label for="title"></label>
+      <input type="text" name="title" id="">
+    </p>
+    <p class="input-field inline col s10">
+      <label for="content"></label>
+      <input type="text" name="content" id="">
+    </p>
+    <p class="input-field inline col s2">
+      <input class="btn btn-warning" type="submit" value="Submit">
+    </p>
+  </form>
+</div>

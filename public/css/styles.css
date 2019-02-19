@@ -6,6 +6,10 @@
   padding: 2%;
 }
 
+.btn {
+  margin: 2%;
+}
+
 h1 {
   text-align: center;
 }
@@ -44,4 +48,9 @@ header {
 
 .form-container {
   margin: 2%;
+}
+
+.edit-container {
+  margin: 2%;
+
 }

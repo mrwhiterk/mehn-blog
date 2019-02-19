@@ -36,6 +36,23 @@ module.exports = {
   new: (req, res) => {
     res.render("new")
   },
+  update: (req, res) => {
+    let {
+      title,
+      content
+    } = req.body;
+    console.log(content);
+    BlogPost.findOne({
+      _id: req.params.id
+    }).then(blogPost => {
+      blogPost.title = title;
+      blogPost.content = content
+
+      blogPost.save(err => {
+        res.redirect(`/${blogPost._id}`)
+      })
+    })
+  },
   delete: (req, res) => {
     BlogPost.findByIdAndRemove(req.params.id, (err, tasks) => {
       if (err) return res.status(500).send(err);
