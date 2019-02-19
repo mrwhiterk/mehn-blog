@@ -4,7 +4,11 @@ const hbs = require("hbs")
 const methodOverride = require("method-override")
 const bodyParser = require("body-parser")
 
+
 const port = 4000
+
+let HandlebarsIntl = require('handlebars-intl');
+HandlebarsIntl.registerWith(hbs);
 
 app.set("view engine", "hbs")
 

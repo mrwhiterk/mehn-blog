@@ -3,16 +3,17 @@
   <div class="blogPost-title">
     <h1>{{ blogPost.title }}</h1>
   </div>
+  <div class="blogPost-action">
+    <span class="blogPost__date">Created: {{ formatDate blogPost.createdAt }}</span>
+  </div>
   <div class="blogPost-content">
     <p>{{ blogPost.content }}</p>
-  </div>
-  <div class="blogPost-action">
-    <span class="blogPost__date">{{ blogPost.createdAt }}</span>
   </div>
   <div class="btn-container">
     <form action="/{{blogPost._id}}?_method=DELETE" method="POST">
       <button class="btn btn-danger">delete</button>
     </form>
+    <button class="btn btn-info" id="showBtn">edit</button>
 
   </div>
 </div>

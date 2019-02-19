@@ -17,7 +17,8 @@ h1 {
 
 .btn-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  margin-top: 20%;
 }
 
 .btn-container * {
@@ -52,5 +53,5 @@ header {
 
 .edit-container {
   margin: 2%;
-
+  visibility: hidden;
 }
