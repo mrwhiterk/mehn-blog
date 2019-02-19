@@ -38,7 +38,7 @@ a {
 main {
   width: 70%;
   border-radius: 10px;
-  margin: 1% auto;
+  margin: 10% auto;
   text-align: center;
 }
 
@@ -53,4 +53,8 @@ header {
 .edit-container {
   margin: 2%;
   visibility: hidden;
+}
+
+a#list-title {
+  color: black;
 }
