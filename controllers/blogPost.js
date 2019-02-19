@@ -41,7 +41,7 @@ module.exports = {
       title,
       content
     } = req.body;
-    console.log(content);
+
     BlogPost.findOne({
       _id: req.params.id
     }).then(blogPost => {
