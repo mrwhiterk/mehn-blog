@@ -20,10 +20,9 @@ app.use(methodOverride("_method"))
 
 app.use(require("./routes/blogPost.js"))
 
-app.listen(port, (err) => {
-  if (err) {
-    console.log(err)
-  } else {
-    console.log(`Server is up and running on ${port}`)
-  }
+app.set('port', process.env.PORT || 3001)
+
+app.listen(app.get(port), () => {
+  // console.log(`Server is up and running on ${app.get('port')}`)
+  console.log(`✅ PORT: ${app.get('port')} 🌟`)
 })
