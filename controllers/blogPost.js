@@ -49,7 +49,7 @@ module.exports = {
       blogPost.content = content
 
       blogPost.save(err => {
-        res.redirect(`/${blogPost._id}`)
+        res.redirect(`/blogPost/${blogPost._id}`)
       })
     })
   },

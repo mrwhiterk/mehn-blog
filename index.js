@@ -35,7 +35,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 const {
-  user
+  User
 } = require("./models/index")
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
@@ -46,7 +46,7 @@ app.use(function (req, res, next) {
   next();
 })
 
-app.use(require("./routes/blogPost.js"))
+app.use(require("./routes/index"))
 
 app.set('port', process.env.PORT || 3001)
 
