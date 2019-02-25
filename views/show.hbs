@@ -11,7 +11,7 @@
     <p>{{ blogPost.content }}</p>
   </div>
   <div class="btn-container">
-    <form action="/{{blogPost._id}}?_method=DELETE" method="POST">
+    <form action="/blogPost/{{blogPost._id}}?_method=DELETE" method="POST">
       <button class="btn btn-danger">delete</button>
     </form>
     <button class="btn btn-info" id="showBtn">edit</button>
@@ -21,7 +21,7 @@
 {{/if}}
 <div class="edit-container">
 
-  <form method="POST" action="/{{blogPost._id}}?_method=PUT" class="row">
+  <form method="POST" action="/blogPost/{{blogPost._id}}?_method=PUT" class="row">
     <label for="title">Title:</label>
     <input type="text" name="title" value="{{blogPost.title}}">
 
