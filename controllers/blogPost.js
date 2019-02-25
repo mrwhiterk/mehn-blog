@@ -1,6 +1,6 @@
 const {
   BlogPost
-} = require("../models/BlogPost")
+} = require("../models/index")
 
 module.exports = {
 

@@ -3,19 +3,23 @@ const router = express.Router()
 const {
   BlogPost
 } = require("../models/index")
+
 const authenticatedUser = require('../utils/authenticatedUser')
 
 router.get('/', (req, res) => {
   BlogPost.find({})
-    .then(posts => {
+    .sort({
+      createdAt: -1
+    })
+    .then(blogPosts => {
       res.render('index', {
-        posts,
-        success: req.flash('success')
+        blogPosts,
+        success: req.flash("success")
       })
     })
 })
 
 router.use(require('./user'))
-router.use('/blogPost', authenticatedUser, require('./blogPost.js'))
+router.use("/blogPost", require('./blogPost.js'))
 
 module.exports = router
