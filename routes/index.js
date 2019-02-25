@@ -20,6 +20,6 @@ router.get('/', (req, res) => {
 })
 
 router.use(require('./user'))
-router.use("/blogPost", require('./blogPost.js'))
+router.use("/blogPost", authenticatedUser, require('./blogPost.js'))
 
 module.exports = router
